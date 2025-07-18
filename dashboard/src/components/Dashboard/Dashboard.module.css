@@ -1,0 +1,58 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.backgroundGlow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(120, 180, 255, 0.25),
+      transparent 70%
+    ),
+    #000000;
+}
+.parent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 8px 8px;
+  grid-template-areas:
+    "Navbar Navbar Navbar"
+    "Grafic Grafic data"
+    "footer footer footer";
+  color: #ffffff;
+  height: 100vh;
+}
+.nav {
+  grid-area: Navbar;
+  background: #494949ff;
+}
+.content {
+  grid-area: Grafic;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sideright {
+  grid-area: data;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  grid-area: footer;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
