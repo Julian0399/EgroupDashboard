@@ -17,16 +17,16 @@ Este proyecto es un **dashboard de criptomonedas** desarrollado con **React + Vi
 A continuación, algunos ejemplos visuales del dashboard en diferentes dispositivos:
 
 ### 🖥️ Desktop
-![Dashboard Desktop](/desktop.jpg)
+![Dashboard Desktop](./public/desktop.jpg)
 
 ### 📱 Tablet
-![Dashboard Tablet](/tablet.jpg)
+![Dashboard Tablet](./public/tablet.jpg)
 
 ### 📱 Mobile - Parte 1
-![Dashboard Mobile 1](/mobile1.jpg)
+![Dashboard Mobile 1](./public/mobile1.jpg)
 
 ### 📱 Mobile - Parte 2
-![Dashboard Mobile 2](/mobile2.jpg)
+![Dashboard Mobile 2](./public/mobile2.jpg)
 
 ---
 
