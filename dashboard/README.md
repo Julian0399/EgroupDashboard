@@ -90,14 +90,6 @@ src/
 
 ---
 
-## 🌐 Demo en línea
-
-> Si lo desplegaste en Vercel, Netlify u otro, añade el enlace aquí:
-
-🔗 https://crypto-dashboard-demo.vercel.app
-
----
-
 ## 🤝 Autor
 
 Desarrollado por **Julian Rodriguez**
