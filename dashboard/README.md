@@ -1,12 +1,108 @@
-# React + Vite
+# 💰 Crypto Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un **dashboard de criptomonedas** desarrollado con **React + Vite**. Consume datos en tiempo real del mercado cripto y los presenta en una interfaz responsiva, moderna y funcional en donde laa idea es cumplir la prueba  tecnica  y que el usuario pueda interactuar con ciertos datos.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [MUI (Material UI)](https://mui.com/)
+- [Chart.js / SparkLineChart](https://mui.com/x/react-charts/) (si aplican)
+- API pública de criptomonedas 
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Vista previa
+
+A continuación, algunos ejemplos visuales del dashboard en diferentes dispositivos:
+
+### 🖥️ Desktop
+![Dashboard Desktop](/desktop.jpg)
+
+### 📱 Tablet
+![Dashboard Tablet](/tablet.jpg)
+
+### 📱 Mobile - Parte 1
+![Dashboard Mobile 1](/mobile1.jpg)
+
+### 📱 Mobile - Parte 2
+![Dashboard Mobile 2](/mobile2.jpg)
+
+---
+
+## 📦 Instalación y ejecución local
+
+### 1. Clona el repositorio
+
+```bash
+git clone https://github.com/Julian0399/EgroupDashboard.git
+cd EgroupDashboard
+cd dashboard
+```
+
+### 2. Instala las dependencias
+
+```bash
+npm install
+# o
+yarn install
+```
+
+### 3. Crea tu archivo de entorno
+
+El proyecto requiere variables de entorno para conectarse a la API. Crea un archivo llamado `.env` en el root del proyect y agrega las claves:
+
+```
+VITE_CG_DEMO_API_URL=https://api.coingecko.com/api/v3
+VITE_CG_DEMO_API_KEY=clave que sera adjunta en el correo o si tienen una pueden usarla
+```
+
+### 4. Ejecuta el servidor de desarrollo
+
+```bash
+npm run dev
+# o
+yarn dev
+```
+
+Abre [http://localhost:5173](http://localhost:5173) para ver el proyecto en el navegador.
+
+---
+
+## 🛠️ Scripts útiles
+
+- `npm run dev` – Inicia el servidor de desarrollo
+- `npm run build` – Genera la versión optimizada para producción
+- `npm run preview` – Sirve localmente la versión producida
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+src/
+│
+├── components/       # Componentes reutilizables
+├── api/              # Lógica para llamadas a API
+├── styles/           # Archivos CSS o módulos
+└── main.jsx          # Punto de entrada
+```
+
+---
+
+## 🌐 Demo en línea
+
+> Si lo desplegaste en Vercel, Netlify u otro, añade el enlace aquí:
+
+🔗 https://crypto-dashboard-demo.vercel.app
+
+---
+
+## 🤝 Autor
+
+Desarrollado por **Julian Rodriguez**
+
+- [LinkedIn](https://www.linkedin.com/in/julianrod-ing/)
+
+---
+
