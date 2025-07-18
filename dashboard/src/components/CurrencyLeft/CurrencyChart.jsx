@@ -1,32 +1,16 @@
 import React, { useState, useEffect } from "react";
 import {
   getCurrencies,
-  getMarketChart,
   getCoinList,
 } from "../../api/dashboardMethods";
 import { LineChart, lineElementClasses } from "@mui/x-charts/LineChart";
 import style from "./CurrencyChart.module.css";
 
-const CurrencyChart = () => {
+const CurrencyChart = ({ marketData, selectedCoinId, setSelectedCoinId, selectedCurrency, setSelectedCurrency, selectDays, setSelectedDays }) => {
   const [currencies, setCurrencies] = useState([]);
-  const [selectedCurrency, setSelectedCurrency] = useState("usd");
-  const [marketData, setMarketData] = useState([]);
-  const [selectedCoinId, setSelectedCoinId] = useState("bitcoin");
-  const [selectDays, setSelectedDays] = useState(7);
   const [coinsList, setCoinsList] = useState([]);
   const [loadingCoins, setLoadingCoins] = useState(true);
-  const topCoins = [
-    "bitcoin",
-    "ethereum",
-    "bnb",
-    "ripple",
-    "solana",
-    "cardano",
-    "dogecoin",
-    "polkadot",
-    "tron",
-    "litecoin",
-  ];
+
   useEffect(() => {
     const fetchCurrencies = async () => {
       try {
@@ -53,28 +37,7 @@ const CurrencyChart = () => {
 
     fetchCoinList();
   }, []);
-  useEffect(() => {
-    const fetchMarketChart = async () => {
-      if (!selectedCoinId || !selectedCurrency) return;
-      try {
-        const data = await getMarketChart(
-          selectedCoinId,
-          selectedCurrency,
-          selectDays
-        );
-        console.log("Market chart data:", data);
-        const formattedData = data.prices.map(([timestamp, price]) => ({
-          timestamp,
-          price,
-        }));
-        setMarketData(formattedData);
-      } catch (error) {
-        console.error("Error fetching market chart:", error);
-      }
-    };
-
-    fetchMarketChart();
-  }, [selectedCoinId, selectedCurrency, selectDays]);
+  
 
   return (
     <div className={style.chartContainer}>
@@ -119,6 +82,7 @@ const CurrencyChart = () => {
       </div>
       <div className={style.chartArea}>
         <LineChart
+          height={330}
           dataset={marketData || []}
           series={[
             {
