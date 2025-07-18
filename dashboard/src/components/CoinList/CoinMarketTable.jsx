@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getCoinsMarket } from "../../api/dashboard";
+import { getCoinsMarket } from "../../api/dashboardMethods";
 import { DataGrid } from "@mui/x-data-grid";
 import { SparkLineChart } from "@mui/x-charts/SparkLineChart";
 import style from "./CoinMarketTable.module.css";

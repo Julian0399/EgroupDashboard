@@ -3,7 +3,6 @@
   width: 100%;
   position: relative;
   background-color: black;
-  overflow: hidden;
 }
 
 .backgroundGlow {
@@ -40,11 +39,13 @@
 .content {
   grid-area: Grafic;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   border-right: 1px solid #ccc;
+  overflow: hidden;
 }
 .sideright {
   grid-area: data;

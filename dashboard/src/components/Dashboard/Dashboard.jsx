@@ -1,4 +1,5 @@
 import { CoinMarketTable } from "../CoinList/CoinMarketTable";
+import CurrencyChart from "../CurrencyRight/CurrencyChart";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Dashboard.module.css";
 
@@ -11,7 +12,7 @@ function Dashboard() {
         <Navbar />
         </div>
         <div className={styles.content}>
-            <p>Content side right</p>
+            <CurrencyChart />
         </div>
         <div className={styles.sideright}>
             <h2>Right Sidebar</h2>
