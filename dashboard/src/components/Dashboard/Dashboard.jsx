@@ -1,4 +1,5 @@
-import { CoinList } from "../CoinList/CoinList";
+import { CoinMarketTable } from "../CoinList/CoinMarketTable";
+import Navbar from "../Navbar/Navbar";
 import styles from "./Dashboard.module.css";
 
 function Dashboard() {
@@ -7,16 +8,16 @@ function Dashboard() {
     <div className={styles.backgroundGlow} />
     <div className={styles.parent}>
         <div className={styles.nav}>
-        <h1>Crypto List</h1>
+        <Navbar />
         </div>
         <div className={styles.content}>
-            <CoinList />
+            <p>Content side right</p>
         </div>
         <div className={styles.sideright}>
             <h2>Right Sidebar</h2>
         </div>
         <div className={styles.footer}>
-            <p>Footer content</p>
+            <CoinMarketTable />
         </div>
     </div>
   </div>

@@ -33,26 +33,34 @@
 }
 .nav {
   grid-area: Navbar;
-  background: #494949ff;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 .content {
   grid-area: Grafic;
-  background: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  border-right: 1px solid #ccc;
 }
 .sideright {
   grid-area: data;
-  background: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  border-left: 1px solid #ccc;
 }
 .footer {
   grid-area: footer;
-  background: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #ccc;
 }
