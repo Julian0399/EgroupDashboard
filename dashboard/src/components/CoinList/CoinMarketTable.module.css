@@ -1,6 +1,8 @@
 .tableContainer {
   width: 100%;
   height: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
 }
 .progressContainer {
   width: 100%;
@@ -13,7 +15,6 @@
   height: 24px;
   border-radius: 4px;
   background-color: #eee;
-  overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
@@ -42,4 +43,32 @@
   font-weight: bold;
   color: black;
   pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .tableContainer {
+    padding: 8px;
+  }
+
+  .progressBar {
+    height: 20px;
+  }
+
+  .progressValue {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    padding: 4px;
+  }
+
+  .progressBar {
+    height: 16px;
+  }
+
+  .progressValue {
+    font-size: 0.6rem;
+  }
 }

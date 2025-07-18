@@ -4,3 +4,9 @@
   height: 100%;
   gap: 16px;
 }
+
+@media (max-width: 1024px) {
+  .layoutInformation {
+    flex-direction: column;
+  }
+}

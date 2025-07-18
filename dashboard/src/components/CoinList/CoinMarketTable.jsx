@@ -14,7 +14,6 @@ export const CoinMarketTable = () => {
       try {
         const data = await getCoinsMarket();
         setCoins(data);
-        
       } catch (err) {
         setError(err);
       } finally {
@@ -28,9 +27,9 @@ export const CoinMarketTable = () => {
   if (error) return <div>Error: {error.message}</div>;
 
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
-    { field: "name", headerName: "Name", width: 150 },
-    { field: "symbol", headerName: "Symbol", width: 120 },
+    { field: "id", headerName: "ID", minWidth: 70, flex: 0.5 },
+    { field: "name", headerName: "Name", minWidth: 120, flex: 1 },
+    { field: "symbol", headerName: "Symbol", minWidth: 80, flex: 0.5 },
     {
       field: "current_price",
       headerName: "Current Price (USD)",
@@ -74,7 +73,6 @@ export const CoinMarketTable = () => {
     {
       field: "sparkline_in_7d",
       headerName: "Sparkline",
-      width: 200,
       renderCell: (params) =>
         params.value?.price?.length ? (
           <SparkLineChart data={params.value.price} />
@@ -96,48 +94,50 @@ export const CoinMarketTable = () => {
 
   return (
     <div className={style.tableContainer}>
-      <DataGrid sx={{
-    backgroundColor: 'transparent', 
-    border: 'none',
-    color: '#fff', 
-    '& .MuiDataGrid-cell': {
-      borderBottom: '1px solid #444', 
-    },
-    '& .MuiDataGrid-columnHeaders': {
-        backgroundColor: '#1e1e1e',
-      color: 'black',
-      borderBottom: '1px solid #444',
-    },
-    '& .MuiDataGrid-row:hover': {
-      backgroundColor: '#222',
-    },
-    '& .MuiDataGrid-footerContainer': {
-      backgroundColor: 'white',
-      color: 'white',
-      borderTop: '1px solid #444',
-    },
-    '& .MuiSvgIcon-root': {
-      color: 'black',
-    },
-    '& .MuiHeader-root': {
-      backgroundColor: 'transparent',
-      color: 'black',
-    },
-
-  }}
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 5,
+      <div style={{ width: "100%", height: "100%" }}>
+        <DataGrid
+          sx={{
+            backgroundColor: "transparent",
+            border: "none",
+            color: "#fff",
+            "& .MuiDataGrid-cell": {
+              borderBottom: "1px solid #444",
             },
-          },
-        }}
-        pageSizeOptions={[5]}
-        loading={loading}
-        disableRowSelectionOnClick
-      />
+            "& .MuiDataGrid-columnHeaders": {
+              backgroundColor: "#1e1e1e",
+              color: "black",
+              borderBottom: "1px solid #444",
+            },
+            "& .MuiDataGrid-row:hover": {
+              backgroundColor: "#222",
+            },
+            "& .MuiDataGrid-footerContainer": {
+              backgroundColor: "white",
+              color: "white",
+              borderTop: "1px solid #444",
+            },
+            "& .MuiSvgIcon-root": {
+              color: "black",
+            },
+            "& .MuiHeader-root": {
+              backgroundColor: "transparent",
+              color: "black",
+            },
+          }}
+          rows={rows}
+          columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 5,
+              },
+            },
+          }}
+          pageSizeOptions={[5]}
+          loading={loading}
+          disableRowSelectionOnClick
+        />
+      </div>
     </div>
   );
 };
