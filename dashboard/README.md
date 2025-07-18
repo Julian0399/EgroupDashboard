@@ -87,6 +87,12 @@ src/
 ├── styles/           # Archivos CSS o módulos
 └── main.jsx          # Punto de entrada
 ```
+---
+
+## 🌐 Demo en línea
+
+
+🔗 https://egroup-dashboard.vercel.app/
 
 ---
 
